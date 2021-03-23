@@ -159,7 +159,7 @@ let jsonParser = bodyParser.json({ limit: '50mb' })
 
 
 app.use(express.static(path.join(__dirname, 'build')));
-//app.use(express.static("public"));
+app.use(express.static("public"));
 
 
 
@@ -186,9 +186,9 @@ app.post('/upload', jsonParser, controller.uploadProject, (req, res) => {
 
 
 );
-//app.use((req, res, next) => {
-//    res.sendFile(path.join(__dirname, "build", "index.html"));
-//});
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 
 
 //my error handler

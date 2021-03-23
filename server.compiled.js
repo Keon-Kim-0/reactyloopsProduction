@@ -149,15 +149,14 @@ const newProject = createProject();
 let urlencodedParser = bodyParser.urlencoded({ extended: false });
 let jsonParser = bodyParser.json({ limit: '50mb' });
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.static("public"));
-
 
 app.get("/YourProject", (req, res) => res.status(200).json(newProject));
 
- app.use(bodyParser.urlencoded({
-     extended: true
- }));
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
 
 app.get("/load", jsonParser, controller.loadProject, (req, res) => {
     let translated = res.locals.rendered;
@@ -171,7 +170,6 @@ app.post('/upload', jsonParser, controller.uploadProject, (req, res) => {
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-
 
 //my error handler
 app.use((err, req, res, next) => {
