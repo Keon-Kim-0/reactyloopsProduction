@@ -44,7 +44,18 @@ body::-webkit-scrollbar { /* WebKit */
   top:75px;
   left:0px;
 }
-
+#psql{
+  position: absolute;
+  top: 60px;
+  left:430px;
+  z-index: 9;
+}
+#aws{
+  position: absolute;
+  top: 60px;
+  right:75px;
+  z-index: 9;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -97,6 +108,7 @@ z-index: 5;
   color:rgb(91, 188, 214);
   font-size: 20px;
   padding-left:10px;
+  padding-bottom:5px;
 }
 .reactyloops2{
   position: absolute;
@@ -204,19 +216,19 @@ input:checked + .slider:before {
 }
 #drum1{
   position: absolute;
-  top:750px;
+  top:749px;
   left:0px;
   z-index: 8;
 }
 #drum2{
   position: absolute;
-  top:825px;
+  top:823px;
   left:0px;
   z-index: 8;
 }
 #drum3{
   position: absolute;
-  top:900px;
+  top:897px;
   left:0px;
   z-index: 8;
 }
@@ -242,6 +254,7 @@ input:checked + .slider:before {
   margin-left: 5px;
   margin-right: 5px;
   outline-color: rgb(34, 34, 34);
+  z-index: 50;
   border: none;
   background-color: transparent;
 }
@@ -260,7 +273,7 @@ input:checked + .slider:before {
   position: fixed;
   left: 0;
   top:0;
-  height:50px;
+  height:35px;
   padding-bottom: 25px;
   width: 100vw;
   text-align: left;
@@ -271,7 +284,7 @@ input:checked + .slider:before {
   overflow: hidden;
   background-color:transparent;
   position: fixed;
-  padding-top: 25px;
+  padding-top: 20px;
   left: 0;
   top:0px;
   height: 50px;

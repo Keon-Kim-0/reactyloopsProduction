@@ -624,20 +624,20 @@ let lineBox = document.getElementById('svg')
 let lineDiv = document.getElementById('up')
 let grid = document.getElementById('grid')
 window.addEventListener('load', () => {
-    lineBox.setAttribute('width', document.documentElement.scrollWidth + 100)
-    lineBox.setAttribute('height', document.documentElement.scrollHeight + 100)
+    lineBox.setAttribute('width', document.documentElement.scrollWidth)
+    lineBox.setAttribute('height', document.documentElement.scrollHeight)
     // line.setAttribute("y1", 0);
     // line.setAttribute("x2", 200);
-    line.setAttribute("y2", String((document.documentElement.scrollHeight + 100)))
-    lineDiv.setAttribute('height', String(document.documentElement.scrollHeight + 100))
+    line.setAttribute("y2", String((document.documentElement.scrollHeight)))
+    lineDiv.setAttribute('height', String(document.documentElement.scrollHeight))
 });
 window.addEventListener('resize', () => {
-    lineBox.setAttribute('width', document.documentElement.scrollWidth + 100)
-    lineBox.setAttribute('height', document.documentElement.scrollHeight + 100)
+    lineBox.setAttribute('width', document.documentElement.scrollWidth)
+    lineBox.setAttribute('height', '972px')
     // line.setAttribute("y1", 0);
     // line.setAttribute("x2", 200);
-    line.setAttribute("y2", String((document.documentElement.scrollHeight + 100)))
-    lineDiv.setAttribute('max-height', String(document.documentElement.scrollHeight + 100))
+    line.setAttribute("y2", String((document.documentElement.scrollHeight)))
+    lineDiv.setAttribute('max-height', '972px')
 });
 
 // let lineControl = 1;
