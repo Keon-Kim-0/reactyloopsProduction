@@ -158,7 +158,7 @@ let urlencodedParser = bodyParser.urlencoded({ extended: false });
 let jsonParser = bodyParser.json({ limit: '50mb' })
 
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(path.join(__dirname, 'build')));
 //app.use(express.static("public"));
 
 
